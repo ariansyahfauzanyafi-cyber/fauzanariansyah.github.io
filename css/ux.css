@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+.ux-section{
+    margin: 3rem 10% 120px;
+}
+
+.uxpage-title{
+    font-weight: bold;
+    margin: 40px auto 10px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.ux-showcase img{
+    width: 100%;
+    max-height: auto;
+    margin: 40px 0px;
+}
+
+.uxproject-info{
+    margin: 0px 0px 40px;
+}
+
+.uxproject-desc{
+    text-align: justify;
+}
+
+.separator{
+    width: 100%;
+    margin: 40px 0px;
+}
+
+.btn{
+    margin: 0px 0px 20px;
+}
+
+/* footer starts here */
+
+.footer{
+    height: auto;
+    width: 100%;
+    padding: 40px 5% 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    background-color: #141414;
+    color:#fff
+}
+
+.get-in-touch {
+    max-width: 450px; /* Forces the text to wrap to the next line */
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Make each item a flex row, center them vertically, and add a gap */
+.information .email, 
+.information .location, 
+.information .social-media {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+}
+
+/* Remove default browser margins so the text stacks cleanly */
+.email-text p, 
+.location-text p {
+    margin: 0; 
+    line-height: 1.4;
+}
+
+/* Make the top text (Email / Location) bold to match the reference */
+.email-text p:first-child,
+.location-text p:first-child {
+    font-weight: bold;
+    margin-bottom: 4px; /* Tiny gap between title and description */
+}
+
+/* Shrink the icons to match the reference design */
+.email img, 
+.location img, 
+.social-media img {
+    width: 35px; 
+    height: auto;
+    padding: 0; /* Removes the 20px 10px padding you had earlier */
+}
+
+
+/* Specific spacing for the social media icons */
+.information .social-media {
+    gap: 2rem; 
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES (Mobile & Small Tablets up to 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* --- 1. Page Margins --- */
+    .ux-section {
+        margin: 2rem 5% 80px; /* Reduces side margins from 10% to 5% for better mobile reading */
+    }
+
+    /* --- 2. Typography Scaling --- */
+    .uxpage-title {
+        font-size: 2rem; /* Scaled down from 2.5rem */
+        margin: 20px auto 10px;
+    }
+    
+    .uxproject-title {
+        font-size: 1.5rem; /* Ensures the project titles don't overpower the screen */
+    }
+
+    /* --- 3. Image Handling --- */
+    .ux-showcase img {
+        margin: 24px 0px; /* Reduces the large 40px top/bottom gap around the hero images */
+        height: auto;     /* Forces the image to maintain its aspect ratio as it shrinks */
+        border-radius: 8px; /* Optional: Adds a slight rounding to the corners on mobile */
+    }
+
+    /* --- 4. Spacing Adjustments --- */
+    .uxproject-info {
+        margin: 0px 0px 20px; /* Reduces the gap below the tags */
+        font-size: 0.9rem;    /* Makes the tags slightly smaller */
+        line-height: 1.4;
+    }
+
+    .uxproject-desc {
+        text-align: left; /* Left-aligned text is much easier to read on narrow phone screens than justified text */
+        margin-bottom: 24px;
+    }
+
+    .separator {
+        margin: 32px 0px; /* Tightens the gap between different case studies */
+    }
+}

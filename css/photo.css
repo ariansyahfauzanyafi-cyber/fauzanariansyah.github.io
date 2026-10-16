@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+.photo-section{
+    margin: 3rem 10% 120px;
+}
+
+.photopage-title{
+    font-weight: bold;
+    margin: 40px auto 10px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.photo-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin: 40px 0px;
+}
+
+.photo-grid img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.portrait-photo .photo-grid img{
+    width: 20%;
+    height: auto;
+}
+
+.photo-grid img:hover {
+    opacity: 0.8; /* Slight dim effect when hovering over the thumbnail */
+}
+
+/* The Dark Background Overlay */
+.photo-modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* Deep black for optimal photo viewing */
+    z-index: 3000; /* High z-index to sit above the navbar */
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Expanded Image */
+.modal-expanded-photo {
+    max-width: 90vw;  /* Leaves a small margin on the left and right */
+    max-height: 90vh; /* Leaves a small margin on the top and bottom */
+    object-fit: contain; 
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* The Close Button */
+.close-photo-btn {
+    position: absolute;
+    top: 24px; right: 32px;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 3010;
+    transition: color 0.2s;
+}
+
+.close-photo-btn:hover {
+    color: #cccccc;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE STYLES (Mobile & Small Tablets up to 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* --- 1. Page Margins --- */
+    .photo-section {
+        margin: 2rem 5% 80px; /* Reduces side margins to 5% to maximize screen space */
+    }
+
+    /* --- 2. Typography --- */
+    .photopage-title {
+        font-size: 2rem; /* Scaled down from 2.5rem */
+        margin: 20px auto 10px;
+    }
+
+    /* --- 3. The Photo Grid --- */
+    .photo-grid {
+        /* Reduces minimum width to 150px to create a nice 2-column grid on phones */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px; /* Reduces the gap from 32px to keep images closer together */
+        margin: 24px 0px;
+    }
+
+    /* Override the 20% width constraint so the portrait photo scales correctly on mobile */
+    .portrait-photo .photo-grid img {
+        width: 100%; 
+        max-width: 250px; /* Prevents it from becoming massively oversized */
+    }
+
+    /* --- 4. Lightbox / Modal Adjustments --- */
+    .close-photo-btn {
+        top: 12px;
+        right: 16px;
+        font-size: 2.2rem; /* Slightly smaller so it doesn't crowd the top corner */
+    }
+}

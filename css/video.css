@@ -1,0 +1,248 @@
+.video-section{
+    margin: 3rem 10% 120px;
+}
+
+.videopage-title{
+    font-weight: bold;
+    margin: 40px auto 10px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.video-showcase{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin: 40px 0px;
+}
+
+.video-card{
+    margin: 20px 0px;
+    background: #fff;
+    border: 0.1rem solid;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0,06);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-box{
+    height: 300px;
+    width: 100%;
+    background: #e2e2e2;
+}
+
+.card-image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text-box{
+    padding: 24px;
+}
+
+.card-text-box h3{
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+}
+
+.card-text-box{
+    margin: 0;
+    color: #141414;
+    font-size: 0.9rem;
+}
+
+/* The Dark Background Overlay */
+.video-modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Darker for video viewing */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* The Pop-up Box */
+.video-modal-content {
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh; /* Prevents the box from growing taller than the screen */
+    overflow-y: auto; /* Enables vertical scrolling inside the modal */
+    position: relative;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+}
+
+.modal-video-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Creates a tiny dark separator line between stacked videos */
+    background: #111; 
+}
+
+/* Floating Close Button */
+.close-video-btn {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.close-video-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Forces the Video to perfectly fit a 16:9 ratio */
+.modal-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio calculation */
+    background: #000;
+}
+
+.modal-video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+/* Typography Spacing */
+.modal-text-area {
+    padding: 32px;
+    text-align: left;
+}
+
+.modal-text-area h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.75rem;
+}
+
+.modal-text-area p {
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* footer starts here */
+
+.footer{
+    height: auto;
+    width: 100%;
+    padding: 40px 5% 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    background-color: #141414;
+    color:#fff
+}
+
+.get-in-touch {
+    max-width: 450px; /* Forces the text to wrap to the next line */
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Make each item a flex row, center them vertically, and add a gap */
+.information .email, 
+.information .location, 
+.information .social-media {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+}
+
+/* Remove default browser margins so the text stacks cleanly */
+.email-text p, 
+.location-text p {
+    margin: 0; 
+    line-height: 1.4;
+}
+
+/* Make the top text (Email / Location) bold to match the reference */
+.email-text p:first-child,
+.location-text p:first-child {
+    font-weight: bold;
+    margin-bottom: 4px; /* Tiny gap between title and description */
+}
+
+/* Shrink the icons to match the reference design */
+.email img, 
+.location img, 
+.social-media img {
+    width: 35px; 
+    height: auto;
+    padding: 0; /* Removes the 20px 10px padding you had earlier */
+}
+
+
+/* Specific spacing for the social media icons */
+.information .social-media {
+    gap: 2rem; 
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES (Mobile & Small Tablets up to 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* --- 1. Page Margins & Text --- */
+    .video-section {
+        margin: 2rem 5% 80px; /* Reduces the 10% side margins to 5% for more screen space */
+    }
+
+    .videopage-title {
+        font-size: 2rem; /* Scaled down from 2.5rem */
+    }
+
+    /* --- 2. Grid & Cards --- */
+    .video-showcase {
+        /* Reduces minimum width from 300px to 240px to prevent horizontal scrolling on small phones */
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+    }
+
+    .card-image-box {
+        height: 220px; /* Reduced from 300px to keep the thumbnails proportional on mobile */
+    }
+
+    /* --- 3. The Video Modal --- */
+    .modal-text-area {
+        padding: 20px; /* Reduced from 32px to maximize screen real estate */
+    }
+
+    .modal-text-area h2 {
+        font-size: 1.4rem;
+    }
+
+    .close-video-btn {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+    }
+}
