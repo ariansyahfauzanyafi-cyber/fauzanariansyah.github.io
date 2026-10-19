@@ -557,6 +557,13 @@ nav ul li a:hover::after {
         display: block;
     }
 
+
+    /* Mobile adjustment for breadcrumbs */
+    .breadcrumb-container {
+        margin: 1.5rem 5% 0; /* Shrinks the side margin to 5% to match your mobile content */
+        font-size: 0.85rem;  /* Slightly smaller text for phone screens */
+    }
+
     /* --- Typography Scaling --- */
     .header-text h1 {
         font-size: 36px; /* Scaled down from 56px for mobile screens */
