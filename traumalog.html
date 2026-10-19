@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <!-- Character encoding and responsive viewport setup -->
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Fauzan Yafi Ariansyah | Portfolio</title>
+            <!-- Link to your external stylesheet -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail" />            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on" />
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/ux-content.css">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+            </style>
+
+        </head>
+        <body>
+            <div class="header" id="header">
+                <div class="container">
+                    <nav>
+                        <div class="logo">
+                            <a href="index.html">FAUZAN'S PORTFOLIO</a>
+                        </div>
+                        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <ul class="menu" id="nav-menu">
+                            <li>
+                                <a href="index.html#about-anchor-home" class="menu-button">About Me</a>
+                            </li>
+                            <li>
+                                <a href="uxprojects.html" class="menu-button">UX Projects</a>
+                            </li>
+                            <li>
+                                <a href="videoprojects.html" class="menu-button">Video Projects</a>
+                            </li>
+                            <li>
+                                <a href="photography.html" class="menu-button">Photography</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <nav aria-label="breadcrumb" class="breadcrumb-container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item breadcrumb-divider">&gt;</li>
+                    <li class="breadcrumb-item"><a href="uxprojects.html">UX Case Studies</a></li>
+                    <li class="breadcrumb-item breadcrumb-divider">&gt;</li>
+                    <li class="breadcrumb-item active" aria-current="page">TraumaLog</li>
+                </ol>
+            </nav>
+
+            <!-- content start here -->
+            <section class="ux-project-content">
+                <div class="content-cover">
+                    <img src="images/traumalog-cover.png" alt="TraumaLog cover">
+                </div>
+                <div class="content-title">
+                    <h2 class="uxproject-title">TraumaLog</h2>
+                    <h3>Digital ransformation of "Trauma Room Registration" (From Paper to Digital)</h3>
+                </div>
+                <div class="uxproject-tags">
+                    <p>UX Research | Wireframes | Prototyping | UI Design</p>
+                </div>
+                <div class="content-text">
+                    <p>This project was developed in collaboration with Städtisches Klinikum Solingen to transform the critical emergency 
+                    registration process from a manual, paper-based form into a real-time digital ecosystem. The application utilizes a 
+                    unique QR code for each patient, making it effortless for paramedics to scan and instantly access or update vital 
+                    patient records on the go. Designed as a continuous digital journey, the form is not only initiated by paramedics in 
+                    the ambulance during transport but is also updated later inside the hospital during active treatment. This seamless 
+                    workflow also solves a major administrative bottleneck: at the end of every year, medical assistants must painstakingly 
+                    review and fill out all missing patient information, a process that is now automated and streamlined through our digital database.</p>
+                    <div class="5-step-ux">
+                        <p><b>The 5-Step UX Process</b></p>
+                        <ol>
+                            <li>
+                                <p><b>Discovery & Research</b></p>
+                                <p><b>Expert Briefing:</b> Kickstarted the project with a briefing from a clinical doctor assistant at Städtisches Klinikum 
+                                    Solingen, analyzing the current paper-based protocol and ER procedures.</p>
+                                <p><b>Form Analysis:</b> Analyzed the physical form to identify critical data requirements and prepared targeted questions 
+                                    to uncover hidden friction points.</p>
+                            </li>
+                            <li>
+                                <p><b>User Interviews & Synthesis</b></p>
+                                <p><b>User Interviews:</b>Conducted, transcribed, and summarized expert interviews with medical professionals to define 
+                                    their exact needs under high-stress scenarios.</p>
+                                <p><b>User Personas:</b> Developed target user personas to ensure the interface directly accommodates the cognitive load 
+                                    and physical limitations of active ER staff and paramedics.</p>
+                            </li>
+                            <li>
+                                <p><b>Workflow Mapping & Feature Planning</b></p>
+                                <p><b>Process Diagram (Prozessdiagramm):</b>Mapped the step-by-step communication loop from the initial ambulance dispatch, 
+                                    through transit data-sharing, to the hospital's trauma room preparation.</p>
+                                <p><b>Implementation Matrix (Umsetzungstabelle):</b> Structured a technical requirement sheet to map out exactly where and 
+                                    how critical data points (such as vitals and injury types) would live in the UI.</p>
+                            </li>
+                            <li>
+                                <p><b>Branding & Visual Identity</b></p>
+                                <p><b>Design System & CI:</b> Established a custom corporate identity for the clinical app—designing a cohesive logo, an 
+                                    accessible high-contrast color palette for rapid legibility, and uniform UI elements.</p>                    
+                            </li>
+                            <li>
+                                <p><b>Collaborative Prototyping</b></p>
+                                <p><b>Agile UI Design:</b> Divided the layout creation across the team (collaborating in pairs on specific screens) to 
+                                    build the final interactive, high-fidelity Figma prototype representing a seamless ambulance-to-hospital transition.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- footer starts here -->
+             <section class="footer">
+                <div class="get-in-touch">
+                    <h3>Looking to get in touch?</h3>
+                    <p>Feel free to contact me to talk about any opportunities or discuss about anything!</p>
+                </div>
+                <div class="information">
+                    <div class="email">
+                        <img src="images/email.svg" role="img" alt="email vector" /> 
+                        <div class="email-text">
+                            <p>Email</p>
+                            <p>ariansyah.fauzanyafi@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <img src="images/location.svg" role="img" alt="location vector" />
+                        <div class="location-text">
+                            <p>Location</p>
+                            <p>Düsseldorf</p>
+                        </div>  
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/fauzan_ariansyah/" target="_blank">
+                            <img src="images/instagram.svg" alt="Instagram logo">                      
+                        </a>
+                        <a href="https://www.linkedin.com/in/fauzanariansyah" target="_blank">
+                            <img src="images/linkedin.png" alt="LinkedIn logo">
+                        </a>
+                    </div>
+                </div>
+             </section>
+             <script src="index.js" charset="UTF-8"></script>
+
+        </body>

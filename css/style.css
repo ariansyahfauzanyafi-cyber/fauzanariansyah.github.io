@@ -81,6 +81,53 @@ nav ul li a:hover::after {
     display: none; 
 }
 
+/* Breadcrumbs Container */
+.breadcrumb-container {
+    margin: 2rem 10% 0; 
+    font-size: 0.95rem;
+}
+
+
+.breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item a {
+    color: #666; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #141414;
+    text-decoration: underline;
+}
+
+
+.breadcrumb-item.breadcrumb-divider {
+    color: #999;
+    margin: 0 10px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.breadcrumb-item.active {
+    color: #141414;
+    font-weight: 500;
+}
+
 
 .header-text{
     margin: 10% 0px 80px;

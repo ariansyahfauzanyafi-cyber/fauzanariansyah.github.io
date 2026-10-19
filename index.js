@@ -26,13 +26,15 @@ const track = document.getElementById('photoTrack');
     return slideWidth + 24; 
   }
 
-  nextBtn.addEventListener('click', () => {
-    track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-  });
+if (nextBtn && prevBtn && track) {
+    nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
 
-  prevBtn.addEventListener('click', () => {
-    track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-  });
+    prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+}
 
 
 function openTab(evt, tabName) {
